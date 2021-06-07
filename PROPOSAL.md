@@ -13,7 +13,7 @@ Budgeting application in Spring that allows users to manage their budget on a mo
 
 # Plan & Expected Timeline
 ## Milestone 1 | 1 Day
-- Get templates rendering on Spring | Upload to GItHub
+- Get templates rendering on Spring | Upload to GitHub
 
 ## Milestone 2 | 1 - 3 Days
 - Get templates setup for displaying information
