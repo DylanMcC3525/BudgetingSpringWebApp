@@ -1,46 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Budgeting</title>
-    <link href="style.css" rel="stylesheet">
+    <link type="text/css" href= "index.css" rel="stylesheet"/>
+
 </head>
 <body>
-    <h1>Budgeting</h1>
-    <h2>Project Description</h2>
-    <p>Budgeting application in Spring that allows users to manage their budget on a monthly basis.</p>
 
-    <h3>Features</h3>
-    <ul>
-        <li>Simple login / logout</li>
-        <li>Users can add accounts</li>
-        <li>Users can add expenses</li>
-        <li>Users can view expenses</li>
-        <li>com.example.demo.User will be able to see balance at all times - Display top right / displayed on Navbar</li>
-        <li>com.example.demo.User will be able to delete / update accounts - such as removing an account / changing it</li>
-    </ul>
+<nav class="navbar" role="navigation" aria-label="main navigation">
 
-    <h2>Plan & Expected Timeline</h2>
-        <h3>Milestone 1 - [1 Day]</h3>
-            <ul>
-                <li>Get templates rendering on Spring | Upload to GitHub</li>
-            </ul>
-        <h3>Milestone 2 - [1 - 3 Days]</h3>
-            <ul>
-                <li>Get templates setup for displaying information</li>
-                <li>Setup db</li>
-                <li>Create controller to handle templates</li>
-            </ul>
-        <h3>Milestone 3 - [1 - 2 Days]</h3>
-            <ul>
-                <li>Create sign up page</li>
-                <li>be able to login / logout</li>
-                <li>research Spring security and implement change password</li>
-            </ul>
-        <h3>Milestone 4 - [Remaining days]</h3>
-            <ul>
-                <li>Remaining time work on primary features and clean up code & project</li>
-            </ul>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Home
+            </a>
+
+            <a class="navbar-item">
+                Balance
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Add Account
+                    </a>
+                    <a class="navbar-item">
+                        Add Expenses
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                        View Accounts
+                    </a>
+                    <a class="navbar-item">
+                        View Expenses
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" th:href="@{/register}">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light" th:href="@{/login}">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <h1 class="quote" > Experience a fresh way to</h1>
+    <h1 class="quote2">manage money</h1>
+
+    <img src=".../static/images/Vector-Banking-Transparent-Image.png" th:src="@{images/Vector-Banking-Transparent-Image.png}" width="50%" height="50%">
+
+    <p class="info">The most basic budget apps typically connect with your financial accounts, track spending and categorize expenses so you can see where your money is going.
+
+        This budget app is a local project from our local software developer. Manage your accounts, Manage your expenses. You'll never be broke again.</p>
+
+
+    <p class="slogan"><i>A smarter way to save, a better way to save. Budgeting made easy</i></p>
+
+
+
 
 </body>
 </html>
