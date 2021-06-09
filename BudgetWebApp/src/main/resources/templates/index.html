@@ -15,32 +15,7 @@
             <a class="navbar-item" sec:authorize="isAuthenticated()">
                 Home
             </a>
-
-            <a sec:authorize="isAuthenticated()" class="navbar-item">
-                Balance
-            </a>
-
-            <div  sec:authorize="isAuthenticated()" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    More
-                </a>
-
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Add Account
-                    </a>
-                    <a class="navbar-item">
-                        Add Expenses
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        View Accounts
-                    </a>
-                    <a class="navbar-item">
-                        View Expenses
-                    </a>
-                </div>
-            </div>
+            
         </div>
 
         <div class="navbar-end" >
