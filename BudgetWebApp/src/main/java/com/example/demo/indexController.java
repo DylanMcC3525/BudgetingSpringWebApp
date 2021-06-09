@@ -21,6 +21,17 @@ public class indexController {
         return "index";
     }
 
+    @GetMapping("/home")
+    public String homeController() {
+
+        return "home";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
@@ -39,11 +50,16 @@ public class indexController {
         return "register_success";
     }
 
-    @GetMapping("/users")
-    public String listUsers(Model model) {
+    @GetMapping("/list_page")
+    public String listPage(Model model) {
         List<User> listUsers = (List<User>) userRepo.findAll();
         model.addAttribute("listUsers", listUsers);
-
-        return "users";
+        return "list_page";
+    }
+    @GetMapping("/detail_page")
+    public String detailPage(Model model) {
+        List<User> listUsers = (List<User>) userRepo.findAll();
+        model.addAttribute("listUsers", listUsers);
+        return "detail_page";
     }
 }

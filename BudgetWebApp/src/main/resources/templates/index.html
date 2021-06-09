@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Budgeting</title>
@@ -12,15 +12,15 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" sec:authorize="isAuthenticated()">
                 Home
             </a>
 
-            <a class="navbar-item">
+            <a sec:authorize="isAuthenticated()" class="navbar-item">
                 Balance
             </a>
 
-            <div class="navbar-item has-dropdown is-hoverable">
+            <div  sec:authorize="isAuthenticated()" class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                     More
                 </a>
@@ -43,14 +43,17 @@
             </div>
         </div>
 
-        <div class="navbar-end">
+        <div class="navbar-end" >
             <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary" th:href="@{/register}">
+                <div class="buttons" >
+                    <a sec:authorize="isAnonymous()"class="button is-primary" th:href="@{/register}">
                         <strong>Sign up</strong>
                     </a>
-                    <a class="button is-light" th:href="@{/login}">
+                    <a sec:authorize="isAnonymous()"class="button is-light" th:href="@{/login}">
                         Log in
+                    </a>
+                    <a sec:authorize="isAuthenticated()"class="button is-light" th:href="@{/logout}" method="POST">
+                        Log out
                     </a>
                 </div>
             </div>

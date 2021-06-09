@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+  <link type="text/css" href= "index.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" sec:authorize="isAuthenticated()">
+          Home
+        </a>
+
+        <a sec:authorize="isAuthenticated()" class="navbar-item">
+          Balance
+        </a>
+
+        <div  sec:authorize="isAuthenticated()" class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Add Account
+            </a>
+            <a class="navbar-item">
+              Add Expenses
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              View Accounts
+            </a>
+            <a class="navbar-item">
+              View Expenses
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end" >
+        <div class="navbar-item" style="left: 950px;">
+          <div class="buttons" >
+            <a sec:authorize="isAnonymous()"class="button is-primary" th:href="@{/register}">
+              <strong>Sign up</strong>
+            </a>
+            <a sec:authorize="isAnonymous()"class="button is-light" th:href="@{/login}">
+              Log in
+            </a>
+            <a sec:authorize="isAuthenticated()"class="button is-light" th:href="@{/logout}" method="POST">
+              Log out
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</nav>
+      <div>
+          <div style="padding-bottom: 15px;padding-top: 15px;margin-left: 15px;">
+            <a th:href="@{/list_page}">View List Page</a>
+          </div>
+          <div style="margin-left: 15px">
+            <a th:href="@{/detail_page}">View Detail Page</a>
+          </div>
+      </div>
+</body>
+</html>
