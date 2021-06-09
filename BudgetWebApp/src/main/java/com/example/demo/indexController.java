@@ -1,12 +1,14 @@
-package entity;
+package com.example.demo;
 
-import entity.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.security.crypto.bcrypt.*;
+
+import java.util.List;
+
 @Controller
 public class indexController {
 
@@ -35,5 +37,13 @@ public class indexController {
         userRepo.save(user);
 
         return "register_success";
+    }
+
+    @GetMapping("/users")
+    public String listUsers(Model model) {
+        List<User> listUsers = (List<User>) userRepo.findAll();
+        model.addAttribute("listUsers", listUsers);
+
+        return "users";
     }
 }
