@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit Funds</title>
+    <link type="text/css" href= "deposit.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<form th:action="@{/saveDeposit}" th:object="${accountList}"
+      method="post">
+<page-overlay>
+  <deposit-modal>
+    <h1>Deposit</h1>
+
+    <label>
+      <span>Amount</span>
+
+      <input type="number"  step="0.01"  name="balance" />
+    </label>
+
+    <section class="provider-section card">
+      <label>
+        <span>Account ID</span>
+        <select>
+          <option th:each="account : ${accountList}"
+                  th:text="${account.id}+' : '+${account.accountType}"></option>
+        </select>
+        <a class="add-new-card" th:href="@{/accounts}">+ Manage Accounts</a>
+      </label>
+
+
+
+      <button>Deposit</button>
+      <small>In accordance with our Responsible Gambling Policy, you can now set Deposit Limits at any time from your account section.</small>
+  </deposit-modal>
+</page-overlay>
+</form>
+</body>
+</html>

@@ -1,5 +1,4 @@
 package com.example.demo;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
@@ -13,27 +12,22 @@ import org.springframework.test.annotation.Rollback;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @Rollback(false)
-public class ExpenseRepositoryTests {
+public class AccountRepositoryTests {
 
     @Autowired
     private TestEntityManager entityManager;
 
     @Autowired
-    private ExpenseRepository repo;
+    private AccountRepository repo;
 
     // test methods go below
     @Test
-    public void testCreateExpense() {
-        Expense expense = new Expense();
-        expense.setLabel("Gas");
-        expense.setExpenseAmount(2004.01);
+    public void testCreateUser() {
+        Account account = new Account();
+        account.setAccountType("Checking");
+        account.setBalance(9000);
 
-
-        Expense savedExpense = repo.save(expense);
-        Expense existUser = entityManager.find(Expense.class, savedExpense.getId());
-
-
-
+        Account savedAccount = repo.save(account);
 
     }
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>New Expense</title>
+</head>
+<body>
+<div align="center">
+  <h1>Create New Expense</h1>
+  <br />
+  <form action="#" th:action="@{/saveExpense}" th:object="${e}"
+        method="post">
+
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>Expense Name:</td>
+        <td><input type="text" th:field="*{label}" /></td>
+      </tr>
+      <tr>
+        <td>Expense Amount:</td>
+        <td><input type="number" step="0.01" th:field="*{expenseAmount}" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="submit">Save</button> </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>

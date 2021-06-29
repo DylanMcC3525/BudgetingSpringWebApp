@@ -11,14 +11,11 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
 
     <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" sec:authorize="isAuthenticated()">
+      <div class="navbar-start" style="background-color:#eaeaea;">
+        <a class="navbar-item" style="padding-left: 0px;" sec:authorize="isAuthenticated()">
           Home
         </a>
 
-        <a sec:authorize="isAuthenticated()" class="navbar-item">
-          Balance
-        </a>
 
         <div  sec:authorize="isAuthenticated()" class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
@@ -26,24 +23,25 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a class="navbar-item" href="/new_account">
               Add Account
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" href="/new_expense">
               Add Expenses
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item">
+            <a class="navbar-item" th:href="@{/accounts}">
               View Accounts
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" th:href="@{/expenses}">
+
               View Expenses
             </a>
           </div>
         </div>
       </div>
 
-      <div class="navbar-end" >
+      <div class="navbar-end" style="background-color:#eaeaea;">
         <div class="navbar-item" style="left: 950px;">
           <div class="buttons" >
             <a sec:authorize="isAnonymous()"class="button is-primary" th:href="@{/register}">
@@ -52,7 +50,7 @@
             <a sec:authorize="isAnonymous()"class="button is-light" th:href="@{/login}">
               Log in
             </a>
-            <a sec:authorize="isAuthenticated()"class="button is-light" th:href="@{/logout}" method="POST">
+            <a sec:authorize="isAuthenticated()"class="button is-light" th:href="@{/logout}" method="POST" type="submit">
               Log out
             </a>
           </div>
@@ -61,13 +59,45 @@
     </div>
   </nav>
 </nav>
+<tr th:object="${user}">
       <div>
-          <div style="padding-bottom: 15px;padding-top: 15px;margin-left: 15px;">
-            <a th:href="@{/list_page}">View List Page</a>
+          <div class="">
+            <div class="userHome" style="padding-top: 20px;padding-left: 20px;margin-top: 20px;margin-right: 33px;">
+              <h2>Hello, <b style="color: #64bd7c">[[${#request.userPrincipal.principal.fullName}]]</b></h2>
+            </div>
           </div>
-          <div style="margin-left: 15px">
-            <a th:href="@{/detail_page}">View Detail Page</a>
-          </div>
+
+            <div class="userDetails" style=" margin-top: 15px;padding-right: 700px;padding-bottom: 450px;">
+              <h2 style="padding-top: 15px; position: absolute;">Personal Details</h2>
+                <div style="position: absolute; padding-top: 50px;">
+
+                  <h3 style="padding-top: 15px;">E-mail:</h3>
+                  <h3 style="padding-top: 15px;">First Name:</h3>
+                  <h3 style="padding-top: 15px;">Last Name:</h3>
+
+                    <div class="userEmail">
+                      <td th:text="${user.email}">E-mail</td>
+                    </div>
+                    <div class="userFirst">
+                      <td th:text="${user.firstName}">First Name</td>
+                    </div>
+                    <div class="userLast">
+                      <td th:text="${user.lastName}">Last Name</td>
+                    </div>
+            </div>
+            </div>
+
+            <div class="userBalance" style="margin-top: 20px;margin-right: 33px;">
+              <h2 style="padding-left: 73px;">Balance</h2>
+              <div style="padding-left: 95px;">
+                $<td th:text="${user.balance}">Balance</td>
+
+                <a style="position:absolute;top: 475px;left: 90px;" class="button is-success " th:href="@{/new_deposit}">Deposit</a>
+
+              </div>
+
+            </div>
       </div>
+</tr>
 </body>
 </html>

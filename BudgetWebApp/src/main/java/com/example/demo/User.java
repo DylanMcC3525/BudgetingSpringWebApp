@@ -1,6 +1,10 @@
 package com.example.demo;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -46,6 +50,10 @@ public class User {
         this.lastName = lastName;
     }
 
+    public List<Expense> getExpenses() {
+        return expenses;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -62,7 +70,32 @@ public class User {
     @Column(name = "last_name", nullable = false, length = 20)
     private String lastName;
 
+    public int getBalance() {
+        return balance;
+    }
 
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
 
+    @Column(name = "balance", nullable = false, length = 100)
+    private int balance;
+
+    @OneToMany
+    @JoinColumn(name="author_id")
+    private List<Expense> expenses;
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany
+    @JoinColumn(name="userid")
+    private List<Account> accounts;
 
 }

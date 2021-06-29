@@ -1,0 +1,157 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  background-color: #eaeaea;
+}
+
+page-overlay {
+  position: fixed;
+  display: flex;
+  background-color: #eaeaea;
+  height: 100vh;
+  width: 100vw;
+}
+
+deposit-modal {
+  margin: auto;
+  display: flex;
+  background: #fff;
+  width: 40rem;
+  min-height: 75rem;
+  padding: 3rem;
+  flex-direction: column;
+  >*+* {
+    margin-bottom: 2rem;
+  }
+}
+
+.provider-section {
+  >*+* {
+    margin-top: 3rem;
+  }
+}
+
+.inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-flow: row nowrap;
+  >*+* {
+    margin-left: 2rem;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid rgba($blue, .5);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+button {
+  background: #64bd7c;;
+  border: none;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: auto;
+}
+
+.add-new-card {
+  display: block;
+  color: $blue;
+  font-size: 1rem;
+  margin: 1.5rem 0 2rem;
+  outline: none;
+  text-decoration: none;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.payment-selection {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  li {
+    border: 1px solid $blue;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    width: 10rem;
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &.selected {
+      background: $blue;
+      color: #fff;
+      opacity: 1;
+      font-weight: 500;
+    }
+  }
+}
+
+label {
+  font-size: 2rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.7em;
+    opacity: 0.8;
+    -webkit-user-select: none;
+  }
+  input {
+    padding: 1.5em 0 0.5em;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1em;
+    background: none;
+  }
+}
+
+.divider {
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+  opacity: 0.3;
+  text-align: center;
+}
+
+small {
+  display: block;
+  color: $blue;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin-bottom: 0;
+}

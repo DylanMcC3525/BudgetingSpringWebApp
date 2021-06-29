@@ -1,45 +1,38 @@
 package com.example.demo;
 
-import java.time.Instant;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import javax.persistence.*;
 
 @Entity
-@NoArgsConstructor
-@Data
-@Table(name="expense")
+@Table(name = "expenses")
 public class Expense {
 
-    public Long getId() {
-        return id;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+
+    @Column(name="expense",nullable = false, length = 45)
+    public String label;
+
+
+    //@Column(name="author_id", nullable = false, length=45)
+    @ManyToOne
+    @JoinColumn(name = "author_id", referencedColumnName="id")
+    public User author;
+
+    @Column(name = "expense_amount", nullable = false, length = 64)
+    public double expenseAmount;
+
+//    Getters & Setters
+public Long getId() {
+    return id;
+}
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Instant getExpensedate() {
-        return expensedate;
-    }
-
-    public void setExpensedate(Instant expensedate) {
-        this.expensedate = expensedate;
-    }
-
-    public String getExpense() {
-        return expense;
-    }
-
-    public void setExpense(String expense) {
-        this.expense = expense;
     }
 
     public double getExpenseAmount() {
@@ -50,29 +43,22 @@ public class Expense {
         this.expenseAmount = expenseAmount;
     }
 
-    public User getUser() {
-        return user;
+    public String getLabel() {
+        return label;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setLabel(String label) {
+        this.label = label;
+    }
+    public User getAuthor() {
+        return author;
     }
 
-    @Id
-    private Long id;
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 
-    private Instant expensedate;
 
-    private String expense;
-
-    private double expenseAmount;
-
-    @ManyToOne
-    private Category category;
-
-    @JsonIgnore
-    @ManyToOne
-    private User user;
 
 
 }

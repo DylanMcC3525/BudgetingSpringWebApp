@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2103bfbe-b9b7-4e0c-a157-869cd21b5374" name="Default Changelist" comment="" />
+    <list default="true" id="2103bfbe-b9b7-4e0c-a157-869cd21b5374" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/ExpenseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/indexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/static/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/test/java/com/example/demo/ExpenseRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/test/java/com/example/demo/ExpenseRepositoryTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +32,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IlluminatedCloudWorkspaceSettings">
     <option name="projectWorkspaceSettings">
@@ -45,9 +72,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -77,7 +106,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -86,8 +115,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplicationTests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.AccountRepositoryTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountRepositoryTests.testCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.AccountRepositoryTests" />
+      <option name="METHOD_NAME" value="testCreateUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,21 +149,6 @@
       <option name="MAIN_CLASS_NAME" value="com.example.demo.ExpenseRepositoryTests" />
       <option name="METHOD_NAME" value="testCreateExpense" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.UserRepositoryTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,10 +172,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.AccountRepositoryTests.testCreateUser" />
+        <item itemvalue="JUnit.AccountRepositoryTests" />
         <item itemvalue="JUnit.ExpenseRepositoryTests.testCreateExpense" />
         <item itemvalue="JUnit.UserRepositoryTests.testCreateUser" />
-        <item itemvalue="JUnit.UserRepositoryTests" />
-        <item itemvalue="JUnit.DemoApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +203,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

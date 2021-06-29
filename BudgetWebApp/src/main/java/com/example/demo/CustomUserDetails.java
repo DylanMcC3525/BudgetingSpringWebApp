@@ -7,11 +7,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 public class CustomUserDetails implements UserDetails {
 
-    private User user;
+    public User user;
 
     public CustomUserDetails(User user) {
         this.user = user;
     }
+
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -52,4 +54,15 @@ public class CustomUserDetails implements UserDetails {
         return user.getFirstName() + " " + user.getLastName();
     }
 
+    public String getFirstName(){
+        return user.getFirstName();
+    }
+
+    public Long getID(){
+        return user.getId();
+    }
+
+    public int getBalance(){
+        return user.getBalance();
+    }
 }
