@@ -54,6 +54,10 @@ public class User {
         return expenses;
     }
 
+    public void setExpenses(List<Expense> expenses) {
+        this.expenses = expenses;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -70,16 +74,16 @@ public class User {
     @Column(name = "last_name", nullable = false, length = 20)
     private String lastName;
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
     @Column(name = "balance", nullable = false, length = 100)
-    private int balance;
+    private double balance;
 
     @OneToMany
     @JoinColumn(name="author_id")

@@ -19,7 +19,7 @@
 
         <div  sec:authorize="isAuthenticated()" class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            More
+            Manage Budget
           </a>
 
           <div class="navbar-dropdown">
@@ -42,7 +42,7 @@
       </div>
 
       <div class="navbar-end" style="background-color:#eaeaea;">
-        <div class="navbar-item" style="left: 950px;">
+        <div class="navbar-item" style="left: 1050px;">
           <div class="buttons" >
             <a sec:authorize="isAnonymous()"class="button is-primary" th:href="@{/register}">
               <strong>Sign up</strong>
@@ -74,6 +74,9 @@
                   <h3 style="padding-top: 15px;">E-mail:</h3>
                   <h3 style="padding-top: 15px;">First Name:</h3>
                   <h3 style="padding-top: 15px;">Last Name:</h3>
+                  <h3 style="padding-top: 15px;">Active Accounts:</h3>
+                  <h3 class="accountBalanceHeader">Active Accounts Balance:</h3>
+                  <h3 style="margin-top: -25px;">Expenses:</h3>
 
                     <div class="userEmail">
                       <td th:text="${user.email}">E-mail</td>
@@ -84,15 +87,24 @@
                     <div class="userLast">
                       <td th:text="${user.lastName}">Last Name</td>
                     </div>
+                  <div class="accountSize">
+                    <td th:text="${#lists.size(accounts)}">[Account Size]</td>
+                  </div>
+                  <div class="expenseSize">
+                    <td th:text="${#lists.size(expenses)}">[Expense Size]</td>
+                  </div>
+                  <div class="accountBalance">
+                    $<td th:text="${accountBalance}">Account Balances</td>
+                  </div>
             </div>
             </div>
 
             <div class="userBalance" style="margin-top: 20px;margin-right: 33px;">
-              <h2 style="padding-left: 73px;">Balance</h2>
-              <div style="padding-left: 95px;">
-                $<td th:text="${user.balance}">Balance</td>
+              <h2 style="padding-left: 30px;"> Overall Balance</h2>
+              <div style="padding-left: 70px;">
+                $<td th:text="${#numbers.formatDecimal(user.balance, 0, 'COMMA', 2, 'POINT')}">Balance</td>
 
-                <a style="position:absolute;top: 475px;left: 90px;" class="button is-success " th:href="@{/new_deposit}">Deposit</a>
+<!--                <a style="position:absolute;top: 475px;left: 90px;" class="button is-success " th:href="@{/new_deposit}">Deposit</a>-->
 
               </div>
 

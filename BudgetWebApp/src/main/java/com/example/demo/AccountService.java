@@ -35,11 +35,12 @@ public class AccountService {
         return repo.findByUserId(userID);
     }
 
-    public void addDepositToUserAccount(Long userID, int balance) {
-        Account currUserAcc = (Account) repo.findByUserId(userID);
-        currUserAcc.setBalance(currUserAcc.getBalance() + balance);
-        repo.save(currUserAcc);
-    }
+//    public void addDepositToUserAccount(Long userID, Long accID, int balance) {
+//        List<Account> currUserAcc = repo.findByUserId(userID);
+//        currUserAcc.removeIf(account -> account.getId() != accID);
+//        repo.save();
+//    }
+
 
 }
 

@@ -124,7 +124,7 @@ a.navbar-item:hover {
 /* User data on home page */
  .userEmail{
  position: absolute;
- left: 150px;
+ left: 90px;
  top: 65px;
  }
 
@@ -139,6 +139,31 @@ a.navbar-item:hover {
   left: 150px;
   top: 160px;
   }
+
+.accountSize{
+    position: relative;
+    left: 185px;
+    bottom: 75px;
+}
+
+.expenseSize{
+    position:relative;
+    left: 115px;
+    bottom: 65px;
+}
+
+.accountBalanceHeader{
+    position:relative;
+    top: -32px;
+    left: 300px;
+}
+.accountBalance{
+    position:relative;
+    left: 570px;
+    bottom: 140px;
+}
+
+
 
 .button.is-success {
     background-color: #64bd7c;

@@ -12,8 +12,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.crypto.bcrypt.*;
 import org.springframework.web.servlet.ModelAndView;
-
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -32,8 +30,11 @@ public class indexController {
     private AccountService accountService;
 
 
+    private Account account;
 
-//  Login / Home
+
+
+                                        //  Login / Home //
     @GetMapping("/")
     public String index() {
 
@@ -44,10 +45,40 @@ public class indexController {
     public String homeController(Model model, @AuthenticationPrincipal CustomUserDetails userDetails) {
         Optional<User> currUser = userRepo.findById(userDetails.getID());
         User currentUser;
+
+        User user = userDetails.user;
+
+        List<Account> listAccounts = accountService.findByUserId(userDetails.getID());
+        List<Expense> listExpenses = service.findByAuthorId(userDetails.getID());
+
+        user.setAccounts(listAccounts);
+        user.setExpenses(listExpenses);
+
+        double totalBalance = 0;
+        double totalAccountBalance = 0;
+        for (Account account : listAccounts){
+            double userBalances = account.getBalance();
+            totalAccountBalance += account.getBalance();
+            totalBalance +=  userBalances;
+        }
+
+
+        for (Expense expense : listExpenses) {
+            double currUserExpenses = expense.getExpenseAmount();
+            totalBalance -= currUserExpenses;
+        }
+        user.setBalance(totalBalance);
+        userRepo.save(user);
+
+
+
         if (currUser.isPresent()) {
             currentUser = currUser.get();
 
             model.addAttribute("user", currentUser );
+            model.addAttribute("accounts",listAccounts);
+            model.addAttribute("expenses", listExpenses);
+            model.addAttribute("accountBalance",totalAccountBalance);
         }
 
         return "home";
@@ -85,7 +116,9 @@ public class indexController {
         return "register_success";
     }
 
-//    Accounts
+
+
+                                        //    Accounts //
 
     @GetMapping("/new_account")
     public String newAccountPage(Model model) {
@@ -128,7 +161,10 @@ public class indexController {
 
 
 
-//    Expenses
+
+
+
+                                        // Expenses //
 
     @GetMapping("/new_expense")
     public String newExpensePage(Model model) {
@@ -171,7 +207,11 @@ public class indexController {
     }
 
 
-//    Balance / Deposit INFO
+
+
+
+
+                            //    Balance / Deposit INFO //
 
     @GetMapping("/new_deposit")
     public String newDepositPage(ModelMap map, @AuthenticationPrincipal CustomUserDetails userDetails) {
@@ -181,12 +221,25 @@ public class indexController {
         return "deposit";
     }
 
-//    @RequestMapping(value = "/saveDeposit", method = RequestMethod.POST)
-//    public String saveDeposit(Account a, @AuthenticationPrincipal CustomUserDetails userDetails) {
+
+//    @RequestMapping(value="/saveDeposit", method=RequestMethod.POST)
+//    public String saveDeposit(@RequestParam("depositBalance") double currBal,Account currAccount, @AuthenticationPrincipal CustomUserDetails userDetails) {
+//        Optional<User> currUser = userRepo.findById(userDetails.getID());
+//        User user = userDetails.user;
 //
+//        User currentUser;
+//        if (currUser.isPresent()) {
+//
+//        }
+//
+//        return "redirect:/home";
 //    }
 
-// Model Pages
+
+
+                    // Model Pages //
+
+
     @GetMapping("/list_page")
     public String listPage(Model model) {
         List<User> listUsers = (List<User>) userRepo.findAll();

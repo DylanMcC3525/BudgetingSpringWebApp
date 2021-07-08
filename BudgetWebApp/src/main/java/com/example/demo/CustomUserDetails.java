@@ -62,7 +62,7 @@ public class CustomUserDetails implements UserDetails {
         return user.getId();
     }
 
-    public int getBalance(){
+    public double getBalance(){
         return user.getBalance();
     }
 }

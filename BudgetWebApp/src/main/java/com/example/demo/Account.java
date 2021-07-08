@@ -29,7 +29,7 @@ public class Account {
     @Column(name="accountType", nullable = false, length=45)
     public String accountType;
 
-    @Column(name="balance", nullable = false)
+    @Column(name="balance")
     public double balance;
 
 
@@ -58,8 +58,5 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
-
-
 
 }
