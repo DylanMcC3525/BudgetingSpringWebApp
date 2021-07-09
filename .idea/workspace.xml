@@ -7,21 +7,9 @@
     <list default="true" id="2103bfbe-b9b7-4e0c-a157-869cd21b5374" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/indexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/static/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/accounts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/deposit.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/deposit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/edit_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/edit_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/expense.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/expense.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/java/com/example/demo/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/new_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/new_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/new_expense.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetWebApp/src/main/resources/templates/new_expense.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

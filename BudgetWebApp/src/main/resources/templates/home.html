@@ -19,7 +19,7 @@
 
         <div  sec:authorize="isAuthenticated()" class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            Manage Budget
+            More
           </a>
 
           <div class="navbar-dropdown">
@@ -100,8 +100,8 @@
             </div>
 
             <div class="userBalance" style="margin-top: 20px;margin-right: 33px;">
-              <h2 style="padding-left: 30px;"> Overall Balance</h2>
-              <div style="padding-left: 70px;">
+              <h2 style="padding-left: 30px;" > Overall Balance</h2>
+              <div style="padding-left: 55px;">
                 $<td th:text="${#numbers.formatDecimal(user.balance, 0, 'COMMA', 2, 'POINT')}">Balance</td>
 
 <!--                <a style="position:absolute;top: 475px;left: 90px;" class="button is-success " th:href="@{/new_deposit}">Deposit</a>-->
